@@ -1,4 +1,4 @@
-﻿using ApiProject.EntityLayer;
+﻿using ApiProject.EntityLayer.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

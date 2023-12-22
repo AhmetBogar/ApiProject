@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApiProject.EntityLayer
+namespace ApiProject.EntityLayer.Models
 {
     public abstract class BaseEntity
     {

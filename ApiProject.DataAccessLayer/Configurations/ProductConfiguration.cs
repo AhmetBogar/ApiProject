@@ -1,4 +1,4 @@
-﻿using ApiProject.EntityLayer;
+﻿using ApiProject.EntityLayer.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

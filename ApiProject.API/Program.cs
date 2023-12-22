@@ -1,3 +1,5 @@
+using ApiProject.BusinessLayer.Mapping;
+using ApiProject.BusinessLayer.Services;
 using ApiProject.DataAccessLayer;
 using ApiProject.DataAccessLayer.Repository;
 using ApiProject.DataAccessLayer.UnitOfWorks;
@@ -18,7 +20,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
-//builder.Services.AddScoped(typeof(IService<>),typeof(Service<>));
+builder.Services.AddScoped(typeof(IService<>),typeof(Service<>));
+builder.Services.AddAutoMapper(typeof(MapProfile));
 
 
 builder.Services.AddDbContext<AppDbContext>(x =>
