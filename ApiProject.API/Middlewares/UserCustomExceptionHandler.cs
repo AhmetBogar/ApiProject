@@ -7,7 +7,7 @@ namespace ApiProject.API.Middlewares
 {
     public static class UserCustomExceptionHandler
     {
-        public static void UserCustomException(this IApplicationBuilder app)
+        public static void UseCustomException(this IApplicationBuilder app)
         {
             app.UseExceptionHandler(config =>
             {
@@ -18,6 +18,7 @@ namespace ApiProject.API.Middlewares
                     var statusCode = exceptionFeature.Error switch
                     {
                         ClientSideException => 400,
+                        NotFoundException => 404,
                         _ => 500
                     };
 

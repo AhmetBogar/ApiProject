@@ -1,4 +1,5 @@
-﻿using ApiProject.EntityLayer.Repositories;
+﻿using ApiProject.BusinessLayer.Exceptions;
+using ApiProject.EntityLayer.Repositories;
 using ApiProject.EntityLayer.Services;
 using ApiProject.EntityLayer.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
@@ -49,7 +50,13 @@ namespace ApiProject.BusinessLayer.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            var hasProduct =  await _repository.GetByIdAsync(id);
+
+            if (hasProduct == null)
+            {
+                throw new NotFoundException($"{typeof(T).Name} not found");
+            }
+            return hasProduct;
         }
 
         public async Task RemoveAsync(T entity)
@@ -58,7 +65,7 @@ namespace ApiProject.BusinessLayer.Services
             await _unitOfWork.CommitAsync();
         }
 
-        public async Task  RemoveRangeAsync(IEnumerable<T> entities)
+        public async Task RemoveRangeAsync(IEnumerable<T> entities)
         {
             _repository.RemoveRange(entities);
             await _unitOfWork.CommitAsync();
