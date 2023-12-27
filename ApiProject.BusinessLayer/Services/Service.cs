@@ -54,7 +54,7 @@ namespace ApiProject.BusinessLayer.Services
 
             if (hasProduct == null)
             {
-                throw new NotFoundException($"{typeof(T).Name} not found");
+                throw new NotFoundException($"{typeof(T).Name}({id}) not found");
             }
             return hasProduct;
         }

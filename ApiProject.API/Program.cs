@@ -9,6 +9,7 @@ using ApiProject.DataAccessLayer.UnitOfWorks;
 using ApiProject.EntityLayer.Repositories;
 using ApiProject.EntityLayer.Services;
 using ApiProject.EntityLayer.UnitOfWorks;
+using Autofac.Extensions.DependencyInjection;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,9 +27,13 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 });
 
 
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped(typeof(NotFoundFilter<>));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -49,6 +54,10 @@ builder.Services.AddDbContext<AppDbContext>(x =>
         option.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
     });
 });
+
+builder.Host.UseServiceProviderFactory
+    (new AutofacServiceProviderFactory());
+
 
 var app = builder.Build();
 
