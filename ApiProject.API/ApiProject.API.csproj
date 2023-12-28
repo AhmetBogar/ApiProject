@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApiProject.BusinessLayer\ApiProject.BusinessLayer.csproj" />
+    <ProjectReference Include="..\ApiProject.Caching\ApiProject.Caching.csproj" />
   </ItemGroup>
 
 </Project>
