@@ -1,11 +1,6 @@
 ﻿using ApiProject.EntityLayer.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApiProject.DataAccessLayer.Seeds
 {
@@ -19,16 +14,16 @@ namespace ApiProject.DataAccessLayer.Seeds
             {
                 Id = 1,
                 CategoryId = 1,
-                Name ="Kalem 1",
-                Price=100,
-                Stock=20,
+                Name = "Kalem 1",
+                Price = 100,
+                Stock = 20,
                 CreatedDate = DateTime.Now,
             },
             new Product
             {
                 Id = 2,
                 CategoryId = 1,
-                Name ="Kalem 2",
+                Name = "Kalem 2",
                 Price = 200,
                 Stock = 30,
                 CreatedDate = DateTime.Now,
@@ -37,7 +32,7 @@ namespace ApiProject.DataAccessLayer.Seeds
             {
                 Id = 3,
                 CategoryId = 1,
-                Name ="Kalem 3",
+                Name = "Kalem 3",
                 Price = 600,
                 Stock = 70,
                 CreatedDate = DateTime.Now,

@@ -3,13 +3,7 @@ using ApiProject.EntityLayer.Repositories;
 using ApiProject.EntityLayer.Services;
 using ApiProject.EntityLayer.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApiProject.BusinessLayer.Services
 {
@@ -50,7 +44,7 @@ namespace ApiProject.BusinessLayer.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            var hasProduct =  await _repository.GetByIdAsync(id);
+            var hasProduct = await _repository.GetByIdAsync(id);
 
             if (hasProduct == null)
             {

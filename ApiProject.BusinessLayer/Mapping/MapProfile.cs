@@ -1,11 +1,6 @@
 ﻿using ApiProject.EntityLayer.DTOs;
 using ApiProject.EntityLayer.Models;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApiProject.BusinessLayer.Mapping
 {
@@ -18,7 +13,7 @@ namespace ApiProject.BusinessLayer.Mapping
             CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
             CreateMap<ProductUpdateDto, Product>();
             CreateMap<Product, ProductWithCategoryDto>();
-            CreateMap<Category,CategoryWithProductsDto>();
+            CreateMap<Category, CategoryWithProductsDto>();
         }
     }
 }

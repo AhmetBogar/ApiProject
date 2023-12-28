@@ -4,11 +4,6 @@ using ApiProject.EntityLayer.Repositories;
 using ApiProject.EntityLayer.Services;
 using ApiProject.EntityLayer.UnitOfWorks;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApiProject.BusinessLayer.Services
 {
@@ -16,16 +11,16 @@ namespace ApiProject.BusinessLayer.Services
     {
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
-        public CategoryService(IGenericRepository<Category> repository, IUnitOfWork unitOfWork, IMapper mapper,ICategoryRepository categoryRepository) : base(repository, unitOfWork)
+        public CategoryService(IGenericRepository<Category> repository, IUnitOfWork unitOfWork, IMapper mapper, ICategoryRepository categoryRepository) : base(repository, unitOfWork)
         {
             _mapper = mapper;
-            _categoryRepository=categoryRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public async Task<CustomResponseDto<CategoryWithProductsDto>> GetSingleCategoryByIdWithProductAsync(int categoryId)
         {
-            var category=await _categoryRepository.GetSingleCategoryByIdWtihProductsAsync(categoryId);
-            var categoryDto=_mapper.Map<CategoryWithProductsDto>(category);
+            var category = await _categoryRepository.GetSingleCategoryByIdWtihProductsAsync(categoryId);
+            var categoryDto = _mapper.Map<CategoryWithProductsDto>(category);
             return CustomResponseDto<CategoryWithProductsDto>.Success(200, categoryDto);
         }
     }

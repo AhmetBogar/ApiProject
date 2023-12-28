@@ -1,9 +1,4 @@
 ﻿using ApiProject.EntityLayer.UnitOfWorks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApiProject.DataAccessLayer.UnitOfWorks
 {
@@ -23,7 +18,7 @@ namespace ApiProject.DataAccessLayer.UnitOfWorks
 
         public async Task CommitAsync()
         {
-           await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }
