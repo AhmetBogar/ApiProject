@@ -1,10 +1,8 @@
 ﻿using ApiProject.API.Filters;
-using ApiProject.BusinessLayer.Services;
 using ApiProject.EntityLayer.DTOs;
 using ApiProject.EntityLayer.Models;
 using ApiProject.EntityLayer.Services;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiProject.API.Controllers

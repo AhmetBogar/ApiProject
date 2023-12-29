@@ -1,6 +1,5 @@
 ﻿using ApiProject.BusinessLayer.Mapping;
 using ApiProject.BusinessLayer.Services;
-using ApiProject.Caching;
 using ApiProject.DataAccessLayer;
 using ApiProject.DataAccessLayer.Repository;
 using ApiProject.DataAccessLayer.UnitOfWorks;
@@ -8,7 +7,6 @@ using ApiProject.EntityLayer.Repositories;
 using ApiProject.EntityLayer.Services;
 using ApiProject.EntityLayer.UnitOfWorks;
 using Autofac;
-using Autofac.Core;
 using System.Reflection;
 using Module = Autofac.Module;
 
@@ -35,7 +33,7 @@ namespace ApiProject.API.Modules
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly, serviceAssembly).Where(x => x.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerLifetimeScope();
 
-            builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
+            //builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
         }
     }
 }

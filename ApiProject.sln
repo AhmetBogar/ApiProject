@@ -3,17 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject.EntityLayer", "ApiProject.EntityLayer\ApiProject.EntityLayer.csproj", "{9BE7B304-7FF0-4644-A3A3-F1C6A1883EDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProject.EntityLayer", "ApiProject.EntityLayer\ApiProject.EntityLayer.csproj", "{9BE7B304-7FF0-4644-A3A3-F1C6A1883EDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject.DataAccessLayer", "ApiProject.DataAccessLayer\ApiProject.DataAccessLayer.csproj", "{16A9E81E-156E-4BB0-AEEF-638235DD379B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProject.DataAccessLayer", "ApiProject.DataAccessLayer\ApiProject.DataAccessLayer.csproj", "{16A9E81E-156E-4BB0-AEEF-638235DD379B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject.BusinessLayer", "ApiProject.BusinessLayer\ApiProject.BusinessLayer.csproj", "{7A72892E-E444-4C3B-818F-93080BDD2175}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProject.BusinessLayer", "ApiProject.BusinessLayer\ApiProject.BusinessLayer.csproj", "{7A72892E-E444-4C3B-818F-93080BDD2175}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject.API", "ApiProject.API\ApiProject.API.csproj", "{499192F7-437E-4C0F-B435-785D3504D289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject.Web", "ApiProject.Web\ApiProject.Web.csproj", "{943496B7-8A6C-411E-A6AD-653887C00DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProject.Web", "ApiProject.Web\ApiProject.Web.csproj", "{943496B7-8A6C-411E-A6AD-653887C00DD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiProject.Caching", "ApiProject.Caching\ApiProject.Caching.csproj", "{20C45725-7E9B-4200-B334-414CD0D05A96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProject.Caching", "ApiProject.Caching\ApiProject.Caching.csproj", "{20C45725-7E9B-4200-B334-414CD0D05A96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07AC996F-EAEA-443C-9EBF-DCD7D22ADB51}"
+	ProjectSection(SolutionItems) = preProject
+		Ports.txt = Ports.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

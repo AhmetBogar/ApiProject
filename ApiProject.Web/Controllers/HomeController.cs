@@ -1,6 +1,5 @@
 ﻿using ApiProject.EntityLayer.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace ApiProject.Web.Controllers
 {
@@ -24,7 +23,7 @@ namespace ApiProject.Web.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error(ErrorViewModel  errorViewModel)
+        public IActionResult Error(ErrorViewModel errorViewModel)
         {
             return View(errorViewModel);
         }

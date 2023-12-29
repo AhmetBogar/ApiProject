@@ -3,7 +3,6 @@ using ApiProject.EntityLayer.Models;
 using ApiProject.EntityLayer.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using System.Runtime.Serialization;
 
 namespace ApiProject.Web
 {

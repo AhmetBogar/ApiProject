@@ -1,0 +1,7 @@
+Api's
+https://localhost:7289/
+http://localhost:5204
+
+Web's
+https://localhost:7059/
+http://localhost:5113
